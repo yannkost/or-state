@@ -1,6 +1,6 @@
 {
   "name": "or-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "State management using Rxjs observables.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,13 @@
   "author": "Yann Kost",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.13.1",
     "rxjs": "^6.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yannkost/or-state"
+  },
+  "devDependencies": {
+    "react": "^16.13.1"
   }
 }
