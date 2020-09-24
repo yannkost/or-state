@@ -21,7 +21,8 @@
  
  In the case of the **createStateManager** method, you can extends the previously created stateObject with its own methods. You will then have accces to the normal state object methods plus your additional methods.
  
- ```const createExtendedStateObject = (state) => {
+ ```
+ const createExtendedStateObject = (state) => {
     return {
         ...stateObject,
         setFalse: () => { state.set(false) }
@@ -31,12 +32,3 @@
 const extendedStateObject = createExtendedStateObject(stateObject)```
 
 Typescript types are included. With generic parameters you can create strongly typed stateManagers that are accessible everywhere.
-
-
-
-
-
-
-
- 
- 
