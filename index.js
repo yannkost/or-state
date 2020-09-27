@@ -70,7 +70,7 @@ export function createStateObjectStore(initialState) {
             if (store) {
                 return store.state
             } else {
-                const newStore = createStateObject<T>(defaultState);
+                const newStore = createStateObject(defaultState);
                 storeProperty.push({ id: id, state: newStore })
                 return newStore
             }
