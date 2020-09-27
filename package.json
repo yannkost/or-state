@@ -1,6 +1,6 @@
 {
   "name": "or-state",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "State management using Rxjs observables.",
   "main": "index.js",
   "scripts": {

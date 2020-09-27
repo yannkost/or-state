@@ -81,8 +81,6 @@ export function createStateObjectStore(initialState) {
         remove: (id) => {
             storeProperty = storeProperty.filter(store => store.id !== id)
         }
-
-
     }
     return stateObjectStore
 }
