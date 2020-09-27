@@ -53,3 +53,36 @@ export function createSimpleState(stateService) {
     }, [])
     return [myState, stateService.set]
 }
+
+
+///////////////////////////////////////////////////////
+// Create State Object Store
+//////////////////////////////////////////////////////
+export function createStateObjectStore(initialState) {
+
+    let storeProperty = []
+    let defaultState = initialState
+
+    const stateObjectStore = {
+        store: storeProperty,
+        get: (id) => {
+            const store = storeProperty.find(s => s.id === id)
+            if (store) {
+                return store.state
+            } else {
+                const newStore = createStateObject<T>(defaultState);
+                storeProperty.push({ id: id, state: newStore })
+                return newStore
+            }
+        },
+        add: (stateObject, id) => {
+            storeProperty.push({ id: id, state: stateObject })
+        },
+        remove: (id) => {
+            storeProperty = storeProperty.filter(store => store.id !== id)
+        }
+
+
+    }
+    return stateObjectStore
+}
